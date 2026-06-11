@@ -23,7 +23,30 @@ const restaurant = {
   order: function (starterIndex, mainIndex) {
     return [this.starterMenu[starterIndex], this.mainMenu[mainIndex]];
   },
+
+  orderDelivery: function ({
+    starterIndex = 1,
+    mainIndex = 0,
+    time = "20,00",
+    address,
+  }) {
+    console.log(
+      `Order recieved! ${this.starterMenu[starterIndex]} and ${this.mainMenu[mainIndex]} will be delieverd to ${address} at ${time}`,
+    );
+  },
 };
+
+restaurant.orderDelivery({
+  time: "23,30",
+  address: "abcdefghi",
+  mainIndex: 2,
+  starterIndex: 2,
+});
+
+restaurant.orderDelivery({
+  address: "abcdefghi",
+  starterIndex: 1,
+});
 
 const { name, openingHours, categories } = restaurant;
 console.log(name, openingHours, categories);
@@ -45,3 +68,9 @@ const obj = { a: 23, b: 7, c: 14 };
 
 ({ a, b } = obj); //destructing var in parenthesis
 console.log(a, b);
+
+//nested objects
+const {
+  fri: { open: o, close: c },
+} = openingHours;
+console.log(o, c);
