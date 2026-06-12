@@ -62,11 +62,11 @@ const { menu = [], starterMenu: starters = [] } = restaurant; // setting menu to
 console.log(menu, starters);
 
 //mutating values
-let a = 111;
-let b = 999;
+let a = 10;
+let b = 20;
 const obj = { a: 23, b: 7, c: 14 };
 
-({ a, b } = obj); //destructing var in parenthesis
+({ a, b } = obj); //destructing var in parenthesis ()
 console.log(a, b);
 
 //nested objects
