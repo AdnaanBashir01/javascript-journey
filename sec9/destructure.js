@@ -38,13 +38,13 @@ const restaurant = {
 
 restaurant.orderDelivery({
   time: "23,30",
-  address: "abcdefghi",
+  address: "areena 01",
   mainIndex: 2,
   starterIndex: 2,
 });
 
 restaurant.orderDelivery({
-  address: "abcdefghi",
+  address: "areena 01",
   starterIndex: 1,
 });
 
