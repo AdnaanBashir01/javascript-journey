@@ -38,7 +38,14 @@ const restaurant = {
   orderPasta: function (ing1, ing2, ing3) {
     console.log(`Here is your delicious pasta with ${ing1} ,${ing2}, ${ing3} `);
   },
+
+  orderPizza: function (mainIngredeint, ...otherIngredeint) {
+    console.log(mainIngredeint);
+    console.log(otherIngredeint);
+  },
 };
+
+//destructing
 
 // spread , becaude on RIGHT side of =
 
@@ -54,6 +61,27 @@ const [pizza, , risotto, ...otherFood] = [
   ...restaurant.starterMenu,
 ];
 console.log(pizza, risotto, otherFood);
+
+// objects
+
+const { sat, ...weekdays } = restaurant.openingHours;
+console.log(weekdays);
+
+// functions
+
+const add = function (...numbers) {
+  let sum = 0;
+  for (let i = 0; i < numbers.length; i++) sum += numbers[i];
+  console.log(sum);
+};
+add(2, 3);
+add(5, 3, 7, 9);
+add(8, 2, 4, 5, 6, 3, 1);
+
+const x = [23, 7, 5];
+add(...x);
+
+restaurant.orderPizza("mushrooms", "onions", "olives");
 
 /////////////////////////////////////
 
