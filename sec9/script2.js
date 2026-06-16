@@ -45,15 +45,19 @@ const restaurant = {
   },
 };
 
+// use any data type, return any data type, short circuiting
+
+console.log(3 || "Adnan");
+
 //destructing
 
 // spread , becaude on RIGHT side of =
 
-const arr = [1, 2, ...[3, 4]];
+// const arr = [1, 2, ...[3, 4]];
 
 // REST , becaude on RIGHT side of =
 
-const [a, b, ...others] = [1, 2, 3, 4, 5];
+/*      const [a, b, ...others] = [1, 2, 3, 4, 5];
 console.log(a, b, others);
 
 const [pizza, , risotto, ...otherFood] = [
@@ -81,7 +85,9 @@ add(8, 2, 4, 5, 6, 3, 1);
 const x = [23, 7, 5];
 add(...x);
 
-restaurant.orderPizza("mushrooms", "onions", "olives");
+restaurant.orderPizza("mushrooms", "onions", "olives");  
+
+*/
 
 /////////////////////////////////////
 
