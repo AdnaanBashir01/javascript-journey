@@ -45,12 +45,19 @@ const restaurant = {
   },
 };
 
+restaurant.numGuests = 0;
+const guests = restaurant.numGuests || 10;
+console.log(guests);
+
+const guestCorrect = restaurant.numGuests ?? 10;
+console.log(guestCorrect); // nullish values instead of falsy
+
 // use any data type, return any data type, short circuiting
 
 ////////////////
 // OR
 
-console.log(3 || "Adnan");
+/*console.log(3 || "Adnan");
 console.log("" || "Adnan");
 console.log(true || 0);
 console.log(undefined || null);
@@ -61,12 +68,12 @@ const guests1 = restaurant.numGuests ? restaurant.numGuests : 10;
 console.log(guests1);
 
 const guest2 = restaurant.numGuests || 10;
-console.log(guest2);
+console.log(guest2);*/
 
 /////////////////
 // AND
 
-console.log(0 && "Adnan");
+/*console.log(0 && "Adnan");
 console.log(7 && "adnan");
 
 console.log("hello" && 23 && null && "Adnan"); //null
@@ -75,7 +82,7 @@ if (restaurant.orderPizza) {
   restaurant.orderPizza("mushrooms", "olives");
 }
 
-restaurant.orderPizza && restaurant.orderPizza("mushrooms", "olives");
+restaurant.orderPizza && restaurant.orderPizza("mushrooms", "olives");*/
 
 //destructing
 
