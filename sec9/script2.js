@@ -66,6 +66,17 @@ console.log(guest2);
 /////////////////
 // AND
 
+console.log(0 && "Adnan");
+console.log(7 && "adnan");
+
+console.log("hello" && 23 && null && "Adnan"); //null
+
+if (restaurant.orderPizza) {
+  restaurant.orderPizza("mushrooms", "olives");
+}
+
+restaurant.orderPizza && restaurant.orderPizza("mushrooms", "olives");
+
 //destructing
 
 // spread , becaude on RIGHT side of =
