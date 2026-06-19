@@ -50,11 +50,10 @@ const guests = restaurant.numGuests || 10;
 console.log(guests);
 
 const guestCorrect = restaurant.numGuests ?? 10;
-console.log(guestCorrect); // nullish values instead of falsy
+console.log(guestCorrect); // nullish values instead of falsy.
 
 // use any data type, return any data type, short circuiting
 
-////////////////
 // OR
 
 /*console.log(3 || "Adnan");
@@ -70,7 +69,6 @@ console.log(guests1);
 const guest2 = restaurant.numGuests || 10;
 console.log(guest2);*/
 
-/////////////////
 // AND
 
 /*console.log(0 && "Adnan");
@@ -101,12 +99,16 @@ const [pizza, , risotto, ...otherFood] = [
 ];
 console.log(pizza, risotto, otherFood);
 
+
 // objects
+
 
 const { sat, ...weekdays } = restaurant.openingHours;
 console.log(weekdays);
 
+
 // functions
+
 
 const add = function (...numbers) {
   let sum = 0;
