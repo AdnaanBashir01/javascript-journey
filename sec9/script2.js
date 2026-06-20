@@ -45,12 +45,44 @@ const restaurant = {
   },
 };
 
-restaurant.numGuests = 0;
+const rest1 = {
+  name: "La italianp",
+  numGuests: 0,
+};
+
+const rest2 = {
+  name: "La Pizza",
+  owner: "rosssi",
+};
+
+// OR assingment
+// rest1.numGuests = rest1.numGuests || 10;
+// rest2.numGuests = rest1.numGuests || 10;
+
+// rest1.numGuests ||= 10;
+// rest2.numGuests ||= 10;
+
+// nullish assingment opt
+// rest1.numGuests ??= 10;
+// rest2.numGuests ??= 10;
+
+// rest1.owner = rest1.owner && '<ANONYMOUS>'
+// rest2.owner = rest2.owner && '<ANONYMOUS>'
+
+rest1.owner &&= "<ANONYMOUS>";
+rest2.owner &&= "<ANONYMOUS>";
+
+console.log(rest1);
+console.log(rest2);
+
+//nullish
+
+/*restaurant.numGuests = 0;
 const guests = restaurant.numGuests || 10;
 console.log(guests);
 
 const guestCorrect = restaurant.numGuests ?? 10;
-console.log(guestCorrect); // nullish values instead of falsy.
+console.log(guestCorrect);*/ // nullish values instead of falsy.
 
 // use any data type, return any data type, short circuiting
 
