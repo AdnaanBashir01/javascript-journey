@@ -1,5 +1,5 @@
 "use strict";
-/* const restaurant = {
+const restaurant = {
   name: "Classico Italiano",
   location: "Via Angelo Tavanti 23, Firenze, Italy",
   categories: ["Italian", "Pizzeria", "Vegetarian", "Organic"],
@@ -45,15 +45,23 @@
   },
 };
 
-const rest1 = {
-  name: "La italianp",
-  numGuests: 0,
-};
+// const rest1 = {
+//   name: "La italianp",
+//   numGuests: 0,
+// };
 
-const rest2 = {
-  name: "La Pizza",
-  owner: "rosssi",
-}; */
+// const rest2 = {
+//   name: "La Pizza",
+//   owner: "rosssi",
+// };
+
+const menu = [...restaurant.starterMenu, ...restaurant.mainMenu];
+
+for (const item of menu) console.log(item);
+
+for (const [i, el] of menu.entries()) {
+  console.log(`${i + 1}: ${el}`);
+}
 
 // OR assingment
 // rest1.numGuests = rest1.numGuests || 10;
@@ -255,79 +263,76 @@ console.log(restaurant.name);
 
 // challenge1
 
-const game = {
-  team1: "Bayern Munich",
-  team2: "Borrussoa Dortmund",
-  players: [
-    [
-      "Andrés Iniesta",
-      "Xavi Hernández",
-      "David Beckham",
-      "Thierry Henry",
-      "Wayne Rooney",
-      "Steven Gerrard",
-      "Frank Lampard",
-      "Andrea Pirlo",
-      "Gennaro Gattuso",
-      "Alessandro Del Piero",
-    ],
-    [
-      "Francesco Totti",
-      "Raúl González",
-      "Iker Casillas",
-      "Carles Puyol",
-      "Rio Ferdinand",
-      "Nemanja Vidić",
-      "Petr Čech",
-      "Robin van Persie",
-      "Arjen Robben",
-      "Wesley Sneijder",
-    ],
-  ],
-  score: "4:0",
-  scored: ["Wayne Rooney", "Steven Gerrard", "Frank Lampard", "Andrea Pirlo"],
-  date: "nov 9, 2037",
-  odds: {
-    team1: 1.33,
-    x: 3.25,
-    team2: 6.5,
-  },
-};
+// const game = {
+//   team1: "Bayern Munich",
+//   team2: "Borrussoa Dortmund",
+//   players: [
+//     [
+//       "Andrés Iniesta",
+//       "Xavi Hernández",
+//       "David Beckham",
+//       "Thierry Henry",
+//       "Wayne Rooney",
+//       "Steven Gerrard",
+//       "Frank Lampard",
+//       "Andrea Pirlo",
+//       "Gennaro Gattuso",
+//       "Alessandro Del Piero",
+//     ],
+//     [
+//       "Francesco Totti",
+//       "Raúl González",
+//       "Iker Casillas",
+//       "Carles Puyol",
+//       "Rio Ferdinand",
+//       "Nemanja Vidić",
+//       "Petr Čech",
+//       "Robin van Persie",
+//       "Arjen Robben",
+//       "Wesley Sneijder",
+//     ],
+//   ],
+//   score: "4:0",
+//   scored: ["Wayne Rooney", "Steven Gerrard", "Frank Lampard", "Andrea Pirlo"],
+//   date: "nov 9, 2037",
+//   odds: {
+//     team1: 1.33,
+//     x: 3.25,
+//     team2: 6.5,
+//   },
+// };
 
-// 1
-const [players1, players2] = game.players;
-console.log(players1, players2);
+// // 1
+// const [players1, players2] = game.players;
+// console.log(players1, players2);
 
-// 2
-const [gk, ...fieldPlayers] = players1;
-console.log(gk, fieldPlayers);
+// // 2
+// const [gk, ...fieldPlayers] = players1;
+// console.log(gk, fieldPlayers);
 
-// 3
-const allPlayers = [...players1, ...players2];
-console.log(allPlayers);
+// // 3
+// const allPlayers = [...players1, ...players2];
+// console.log(allPlayers);
 
-// 4
-const players1Final = [...players1, "Thiago", "Coutinho", "Perisic"];
-console.log(players1Final);
+// // 4
+// const players1Final = [...players1, "Thiago", "Coutinho", "Perisic"];
+// console.log(players1Final);
 
-// 5
-const {
-  odds: { team1, x: draw, team2 },
-} = game;
+// // 5
+// const {
+//   odds: { team1, x: draw, team2 },
+// } = game;
 
-console.log(team1, draw, team2);
+// console.log(team1, draw, team2);
 
-// 6
-const printGoals = function (...players) {
-  console.log(players);
-  console.log(`${players.length} goals were scored`);
-};
+// // 6
+// const printGoals = function (...players) {
+//   console.log(players);
+//   console.log(`${players.length} goals were scored`);
+// };
 
-// printGoals("Davies", "Muller", "Lewandowski", "Kimmich");
-// printGoals("Davies", "Muller");
+// printGoals(...game.scored);
 
-printGoals(...game.scored);
-
-// 7
-team1 < team2 && console.log(`${game.team1} is more likely to win`);
-team2 < team1 && console.log(`${game.team2} is more likely to win`);
+// // 7
+// team1 < team2 && console.log(`${game.team1} is more likely to win`);
+// team2 < team1 && console.log(`${game.team2} is more likely to win`);
