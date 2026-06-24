@@ -9,4 +9,4 @@ It helps me improve my coding skills step by step.
 - JavaScript practice
 - DOM manipulation
 - Basic projects
-testing my github pull request
+
