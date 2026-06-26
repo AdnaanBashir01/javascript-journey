@@ -48,13 +48,6 @@ const restaurant = {
   },
 };
 
-if (restaurant.openingHours && restaurant.openingHours.mon)
-  console.log(restaurant.openingHours.mon.open);
-
-//with optimal chaining
-console.log(restaurant.openingHours.mon?.open);
-console.log(restaurant.openingHours?.mon?.open);
-
 // const rest1 = {
 //   name: "La italianp",
 //   numGuests: 0,
