@@ -48,31 +48,56 @@ const restaurant = {
   },
 };
 
-if (restaurant.openingHours && restaurant.openingHours.mon)
-  console.log(restaurant.openingHours.mon.open);
+// propety names
+const properties = Object.keys(openingHours);
+console.log(properties);
 
-//optional chaining
-console.log(restaurant.openingHours.mon?.open);
-console.log(restaurant.openingHours?.mon?.open);
+let openStr = `we are open on ${properties.length} days:`;
+for (const day of properties) {
+  openStr += `${day},`;
+}
+console.log(openStr);
 
-const days = ["mon", "tue", "wed", "thr", "fri", "sat", "sun"];
-for (const day of days) {
-  //day getting elements dyanamically
-  console.log(day);
-  const open = restaurant.openingHours[day]?.open ?? "closed";
-  console.log(`On ${day}, we open at ${open}`);
+//property values
+
+const values = Object.values(openingHours);
+console.log(values);
+
+const entries = Object.entries(openingHours);
+// console.log(entries);
+
+for (const [key, { open, close }] of entries) {
+  console.log(`on ${key} we open at ${open} and close at ${close}`);
 }
 
-//methods
-console.log(restaurant.order?.(0, 1) ?? "method doesnt exist");
-console.log(restaurant.orderRisotto?.(0, 1) ?? "method doesnt exist");
+// if (restaurant.openingHours && restaurant.openingHours.mon)
+//   console.log(restaurant.openingHours.mon.open);
 
-//arrays
-const users = [{ name: "adnan", email: "adnnan@gmail" }];
-console.log(users[0]?.name ?? "user array empty"); //?. value on the left exist
-if (users.length > 0)
-  console.log(users[0].name); //withou optimal chaining
-else console.log("user array empty");
+// //optional chaining
+
+// console.log(restaurant.openingHours.mon?.open);
+// console.log(restaurant.openingHours?.mon?.open);
+
+// const days = ["mon", "tue", "wed", "thr", "fri", "sat", "sun"];
+// for (const day of days) {
+//   //day getting elements dyanamically
+//   console.log(day);
+//   const open = restaurant.openingHours[day]?.open ?? "closed";
+//   console.log(`On ${day}, we open at ${open}`);
+// }
+
+// //methods
+
+// console.log(restaurant.order?.(0, 1) ?? "method doesnt exist");
+// console.log(restaurant.orderRisotto?.(0, 1) ?? "method doesnt exist");
+
+// //arrays
+
+// const users = [{ name: "adnan", email: "adnnan@gmail" }];
+// console.log(users[0]?.name ?? "user array empty"); //?. value on the left exist
+// if (users.length > 0)
+//   console.log(users[0].name); //without optimal chaining
+// else console.log("user array empty");
 
 // const rest1 = {
 //   name: "La italianp",
