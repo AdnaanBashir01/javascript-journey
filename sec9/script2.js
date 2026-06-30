@@ -319,44 +319,60 @@ console.log(restaurant.name);
 
 // challenge1
 
-// const game = {
-//   team1: "Bayern Munich",
-//   team2: "Borrussoa Dortmund",
-//   players: [
-//     [
-//       "Andrés Iniesta",
-//       "Xavi Hernández",
-//       "David Beckham",
-//       "Thierry Henry",
-//       "Wayne Rooney",
-//       "Steven Gerrard",
-//       "Frank Lampard",
-//       "Andrea Pirlo",
-//       "Gennaro Gattuso",
-//       "Alessandro Del Piero",
-//     ],
-//     [
-//       "Francesco Totti",
-//       "Raúl González",
-//       "Iker Casillas",
-//       "Carles Puyol",
-//       "Rio Ferdinand",
-//       "Nemanja Vidić",
-//       "Petr Čech",
-//       "Robin van Persie",
-//       "Arjen Robben",
-//       "Wesley Sneijder",
-//     ],
-//   ],
-//   score: "4:0",
-//   scored: ["Wayne Rooney", "Steven Gerrard", "Frank Lampard", "Andrea Pirlo"],
-//   date: "nov 9, 2037",
-//   odds: {
-//     team1: 1.33,
-//     x: 3.25,
-//     team2: 6.5,
-//   },
-// };
+const game = {
+  team1: "Bayern Munich",
+  team2: "Borrussoa Dortmund",
+  players: [
+    [
+      "Andrés Iniesta",
+      "Xavi Hernández",
+      "David Beckham",
+      "Thierry Henry",
+      "Wayne Rooney",
+      "Steven Gerrard",
+      "Frank Lampard",
+      "Andrea Pirlo",
+      "Gennaro Gattuso",
+      "Alessandro Del Piero",
+    ],
+    [
+      "Francesco Totti",
+      "Raúl González",
+      "Iker Casillas",
+      "Carles Puyol",
+      "Rio Ferdinand",
+      "Nemanja Vidić",
+      "Petr Čech",
+      "Robin van Persie",
+      "Arjen Robben",
+      "Wesley Sneijder",
+    ],
+  ],
+  score: "4:0",
+  scored: ["Wayne Rooney", "Steven Gerrard", "Frank Lampard", "Andrea Pirlo"],
+  date: "nov 9, 2037",
+  odds: {
+    team1: 1.33,
+    x: 3.25,
+    team2: 6.5,
+  },
+};
+
+//challenge2
+
+for (const [indexs, playernames] of game.scored.entries())
+  console.log(`Goal ${indexs + 1}: ${playernames}`);
+
+const odds = Object.values(game.odds);
+let average = 0;
+for (const odd of odds) average += odd;
+average /= odds.length;
+console.log(average);
+
+for (const [team, odd] of Object.entries(game.odds)) {
+  const teamStr = team === "x" ? "draw" : `victory ${game[team]}`;
+  console.log(`Odd of ${teamStr} ${odd}`);
+}
 
 // // 1
 // const [players1, players2] = game.players;
