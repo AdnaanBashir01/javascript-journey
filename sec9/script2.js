@@ -67,6 +67,47 @@ const staffunique = [...new Set(staff)];
 console.log(staffunique);
 console.log(new Set(["waiter", "chef", "Manager", "waiter"]).size);
 
+//Sets
+
+const italianFoods = new Set([
+  "pasta",
+  "gnocchi",
+  "tomatoes",
+  "olive oil",
+  "garlic",
+  "basil",
+]);
+
+const mexicanFoods = new Set([
+  "tortillas",
+  "beans",
+  "rice",
+  "tomatoes",
+  "avocado",
+  "garlic",
+]);
+//method intersection
+
+const commonFoods = italianFoods.intersection(mexicanFoods);
+console.log("Intersection", commonFoods);
+console.log([...commonFoods]);
+
+const italianMexicanFusion = italianFoods.union(mexicanFoods);
+console.log("Union", italianMexicanFusion);
+
+console.log([...new Set([...italianFoods, ...mexicanFoods])]);
+
+const uniqueitalianFoods = italianFoods.difference(mexicanFoods);
+console.log("Difference", uniqueitalianFoods);
+
+const uniqueMexicanFoods = mexicanFoods.difference(mexicanFoods);
+console.log("Difference", uniqueMexicanFoods);
+
+const uniqueBoth = italianFoods.symmetricDifference(mexicanFoods);
+console.log(uniqueBoth);
+
+console.log(italianFoods.isDisjointFrom(mexicanFoods));
+
 // // propety names
 
 // const properties = Object.keys(openingHours);
