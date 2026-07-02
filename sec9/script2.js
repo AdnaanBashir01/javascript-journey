@@ -48,65 +48,96 @@ const restaurant = {
   },
 };
 
-const orderSet = new Set(["pasta", "pizza", "risotoo", "pizza", "pizza"]);
-console.log(orderSet);
+const rest = new Map();
+rest.set("name", "classico italino");
+rest.set(1, "firenze, Italy");
+console.log(rest.set(2, "lisbon,portugal"));
 
-console.log(new Set("Adnan"));
-console.log(orderSet.size);
-console.log(orderSet.has("pizza"));
-orderSet.add("bread");
-orderSet.delete("risotoo");
-console.log(orderSet);
+rest
+  .set("catagories", ["Italian", "Pizzeria", "vegetarian", "Organic"])
+  .set("open", 11)
+  .set("close", 23)
+  .set(true, "we are open")
+  .set(false, "we are closed");
 
-for (const order of orderSet) console.log(order);
+console.log(rest.set("name"));
+console.log(rest.set(true));
+console.log(rest.set(1));
+
+const time = 21;
+console.log(rest.set(time > rest.get("open") && time < rest.set("close")));
+
+console.log(rest.has("catagories"));
+rest.delete(2);
+// rest.clear();
+
+const arr = [1, 2];
+rest.set(arr, "test");
+
+console.log(rest);
+console.log(rest.size);
+
+console.log(rest.get(arr));
+
+// const orderSet = new Set(["pasta", "pizza", "risotoo", "pizza", "pizza"]);
+// console.log(orderSet);
+
+// console.log(new Set("Adnan"));
+// console.log(orderSet.size);
+// console.log(orderSet.has("pizza"));
+// orderSet.add("bread");
+// orderSet.delete("risotoo");
+// console.log(orderSet);
+
+// for (const order of orderSet) console.log(order);
 
 //eg
 
-const staff = ["waiter", "chef", "Manager", "waiter"];
-const staffunique = [...new Set(staff)];
-console.log(staffunique);
-console.log(new Set(["waiter", "chef", "Manager", "waiter"]).size);
+// const staff = ["waiter", "chef", "Manager", "waiter"];
+// const staffunique = [...new Set(staff)];
+// console.log(staffunique);
+// console.log(new Set(["waiter", "chef", "Manager", "waiter"]).size);
 
 //Sets
 
-const italianFoods = new Set([
-  "pasta",
-  "gnocchi",
-  "tomatoes",
-  "olive oil",
-  "garlic",
-  "basil",
-]);
+// const italianFoods = new Set([
+//   "pasta",
+//   "gnocchi",
+//   "tomatoes",
+//   "olive oil",
+//   "garlic",
+//   "basil",
+// ]);
 
-const mexicanFoods = new Set([
-  "tortillas",
-  "beans",
-  "rice",
-  "tomatoes",
-  "avocado",
-  "garlic",
-]);
-//method intersection
+// const mexicanFoods = new Set([
+//   "tortillas",
+//   "beans",
+//   "rice",
+//   "tomatoes",
+//   "avocado",
+//   "garlic",
+// ]);
+// //method intersection
 
-const commonFoods = italianFoods.intersection(mexicanFoods);
-console.log("Intersection", commonFoods);
-console.log([...commonFoods]);
+// const commonFoods = italianFoods.intersection(mexicanFoods);
+// console.log("Intersection", commonFoods);
+// console.log([...commonFoods]);
 
-const italianMexicanFusion = italianFoods.union(mexicanFoods);
-console.log("Union", italianMexicanFusion);
+// const italianMexicanFusion = italianFoods.union(mexicanFoods);
+// console.log("Union", italianMexicanFusion);
 
-console.log([...new Set([...italianFoods, ...mexicanFoods])]);
+// console.log([...new Set([...italianFoods, ...mexicanFoods])]);
 
-const uniqueitalianFoods = italianFoods.difference(mexicanFoods);
-console.log("Difference", uniqueitalianFoods);
+// const uniqueitalianFoods = italianFoods.difference(mexicanFoods);
+// console.log("Difference", uniqueitalianFoods);
 
-const uniqueMexicanFoods = mexicanFoods.difference(mexicanFoods);
-console.log("Difference", uniqueMexicanFoods);
+// const uniqueMexicanFoods = mexicanFoods.difference(mexicanFoods);
+// console.log("Difference", uniqueMexicanFoods);
 
-const uniqueBoth = italianFoods.symmetricDifference(mexicanFoods);
-console.log(uniqueBoth);
+// const uniqueBoth = italianFoods.symmetricDifference(mexicanFoods);
+// console.log(uniqueBoth);
 
-console.log(italianFoods.isDisjointFrom(mexicanFoods));
+// console.log(italianFoods.isDisjointFrom(mexicanFoods));
 
 // // propety names
 
