@@ -48,36 +48,66 @@ const restaurant = {
   },
 };
 
-const rest = new Map();
-rest.set("name", "classico italino");
-rest.set(1, "firenze, Italy");
-console.log(rest.set(2, "lisbon,portugal"));
+//Maps
+const question = new Map([
+  ["question", "what is the best prog lang in the world"],
+  [1, "C"],
+  [2, "Java"],
+  [3, "JavaScript"],
+  ["correct", 3],
+  [true, "correct"],
+  [false, "try again"],
+]);
+console.log(question);
 
-rest
-  .set("catagories", ["Italian", "Pizzeria", "vegetarian", "Organic"])
-  .set("open", 11)
-  .set("close", 23)
-  .set(true, "we are open")
-  .set(false, "we are closed");
+// object to map
+console.log(Object.entries(openingHours));
+const hoursMap = new Map(Object.entries(openingHours));
+console.log(hoursMap);
 
-console.log(rest.set("name"));
-console.log(rest.set(true));
-console.log(rest.set(1));
+//iterations
+for (const [keys, values] of question) {
+  if (typeof key === "number") console.log(`answer ${key}: ${value}`);
+}
+// const answer = Number(prompt("Your Answer"));
+const answer = 3;
+console.log(answer);
 
-const time = 21;
-console.log(rest.set(time > rest.get("open") && time < rest.set("close")));
+console.log(question.get(question.get("correct") === answer));
 
-console.log(rest.has("catagories"));
-rest.delete(2);
-// rest.clear();
+//map to array
+console.log([...question]);
 
-const arr = [1, 2];
-rest.set(arr, "test");
+// const rest = new Map();
+// rest.set("name", "classico italino");
+// rest.set(1, "firenze, Italy");
+// console.log(rest.set(2, "lisbon,portugal"));
 
-console.log(rest);
-console.log(rest.size);
+// rest
+//   .set("catagories", ["Italian", "Pizzeria", "vegetarian", "Organic"])
+//   .set("open", 11)
+//   .set("close", 23)
+//   .set(true, "we are open")
+//   .set(false, "we are closed");
 
-console.log(rest.get(arr));
+// console.log(rest.set("name"));
+// console.log(rest.set(true));
+// console.log(rest.set(1));
+
+// const time = 21;
+// console.log(rest.set(time > rest.get("open") && time < rest.set("close")));
+
+// console.log(rest.has("catagories"));
+// rest.delete(2);
+// // rest.clear();
+
+// const arr = [1, 2];
+// rest.set(arr, "test");
+
+// console.log(rest);
+// console.log(rest.size);
+
+// console.log(rest.get(arr));
 
 // const orderSet = new Set(["pasta", "pizza", "risotoo", "pizza", "pizza"]);
 // console.log(orderSet);
