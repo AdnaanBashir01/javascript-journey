@@ -49,6 +49,7 @@ const restaurant = {
 };
 
 //Strings
+
 // const airline = "TAP Air Portugal";
 // const plane = "A320";
 
@@ -88,6 +89,32 @@ const restaurant = {
 // console.log(typeof new String("Adnan"));
 
 // console.log(typeof new String("Adnan").slice(1));
+
+//Strings 2
+
+// Working With Strings - Part 2
+
+const airline = "TAP Air Portugal";
+
+console.log(airline.toLowerCase());
+console.log(airline.toUpperCase());
+
+// Fix capitalization in name
+const passenger = "aDnaN"; // Jonas
+const passengerLower = passenger.toLowerCase();
+const passengerCorrect =
+  passengerLower[0].toUpperCase() + passengerLower.slice(1);
+console.log(passengerCorrect);
+
+// Comparing emails
+const email = "hello@adnan.io";
+const loginEmail = "  Hello@Adnan.Io \n";
+
+// const lowerEmail = loginEmail.toLowerCase();
+// const trimmedEmail = lowerEmail.trim();
+const normalizedEmail = loginEmail.toLowerCase().trim();
+console.log(normalizedEmail);
+console.log(email === normalizedEmail);
 
 // practice 3
 // const gameEvents = new Map([
