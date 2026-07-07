@@ -117,11 +117,18 @@ const restaurant = {
 // console.log(email === normalizedEmail);
 
 // replacing
+const priceGB = "288,97£";
+const priceUS = priceGB.replace("£", "$").replace(",", ".");
+console.log(priceUS);
 
+const announcement =
+  "All passengers come to boarding door 23. Boarding door 23!";
 // const priceGB = "288,97£";
 // const priceUS = priceGB.replace("£", "$").replace(",", ".");
 // console.log(priceUS);
 
+console.log(announcement.replace("door", "gate"));
+console.log(announcement.replaceAll("door", "gate"));
 // const announcement =
 //   "All passengers come to boarding door 23. Boarding door 23!";
 
@@ -129,10 +136,18 @@ const restaurant = {
 // console.log(announcement.replaceAll("door", "gate"));
 
 // Alternative solution to replaceAll with regular expression
+console.log(announcement.replace(/door/g, "gate"));
 // console.log(announcement.replace(/door/g, "gate"));
 
 // Booleans
+const plane = "Airbus A320neo";
+console.log(plane.includes("A320"));
+console.log(plane.includes("Boeing"));
+console.log(plane.startsWith("Airb"));
 
+if (plane.startsWith("Airbus") && plane.endsWith("neo")) {
+  console.log("Part of the NEW ARirbus family");
+}
 // const plane = "Airbus A320neo";
 // console.log(plane.includes("A320"));
 // console.log(plane.includes("Boeing"));
@@ -158,15 +173,17 @@ const restaurant = {
 // checkBaggage("Socks and camera");
 // checkBaggage("Got some snacks and a gun for protection");
 
+//Strings 3
+
 // Split and join
 
-console.log("a+very+nice+string".split("+"));
-console.log("Adnan Bashir".split(" "));
+// console.log("a+very+nice+string".split("+"));
+// console.log("Adnan Bashir".split(" "));
 
-const [firstName, lastName] = "Jonas Schmedtmann".split(" ");
+// const [firstName, lastName] = "Adnan Bashir".split(" ");
 
-const newName = ["Mr.", firstName, lastName.toUpperCase()].join(" ");
-console.log(newName);
+// const newName = ["Mr.", firstName, lastName.toUpperCase()].join(" ");
+// console.log(newName);
 
 const capitalizeName = function (name) {
   const names = name.split(" ");
@@ -179,8 +196,59 @@ const capitalizeName = function (name) {
   console.log(namesUpper.join(" "));
 };
 
-capitalizeName("addy and robin davis");
-capitalizeName("adnaan bashir");
+capitalizeName("jessica ann smith davis");
+capitalizeName("jonas schmedtmann");
+
+// Padding
+const message = "Go to gate 23!";
+console.log(message.padStart(20, "+").padEnd(30, "+"));
+console.log("Jonas".padStart(20, "+").padEnd(30, "+"));
+
+const maskCreditCard = function (number) {
+  const str = number + "";
+  const last = str.slice(-4);
+  return last.padStart(str.length, "*");
+};
+
+console.log(maskCreditCard(64637836));
+console.log(maskCreditCard(43378463864647384));
+console.log(maskCreditCard("334859493847755774747"));
+
+// Repeat
+const message2 = "Bad waether... All Departues Delayed... ";
+console.log(message2.repeat(5));
+
+const planesInLine = function (n) {
+  console.log(`There are ${n} planes in line ${"🛩".repeat(n)}`);
+};
+planesInLine(5);
+planesInLine(3);
+planesInLine(12);
+
+// Practice exercise
+// const checkBaggage = function (items) {
+//   const baggage = items.toLowerCase();
+//   const capitalizeName = function (name) {
+//     const names = name.split(" ");
+//     const namesUpper = [];
+
+//     if (baggage.includes("knife") || baggage.includes("gun")) {
+//       console.log("You are NOT allowed on board");
+//     } else {
+//       console.log("Welcome aboard!");
+//       for (const n of names) {
+//         // namesUpper.push(n[0].toUpperCase() + n.slice(1));
+//         namesUpper.push(n.replace(n[0], n[0].toUpperCase()));
+//       }
+//       console.log(namesUpper.join(" "));
+//     }
+//   };
+// };
+// checkBaggage("I have a laptop, some Food and a pocket Knife");
+// checkBaggage("Socks and camera");
+// checkBaggage("Got some snacks and a gun for protection");
+// capitalizeName("addy and robin davis");
+// capitalizeName("adnaan bashir");
 
 // practice 3
 // const gameEvents = new Map([
