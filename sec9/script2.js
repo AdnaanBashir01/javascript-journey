@@ -202,7 +202,7 @@ capitalizeName("jonas schmedtmann");
 // Padding
 const message = "Go to gate 23!";
 console.log(message.padStart(20, "+").padEnd(30, "+"));
-console.log("Jonas".padStart(20, "+").padEnd(30, "+"));
+console.log("Adnan".padStart(20, "+").padEnd(30, "+"));
 
 const maskCreditCard = function (number) {
   const str = number + "";
@@ -215,7 +215,7 @@ console.log(maskCreditCard(43378463864647384));
 console.log(maskCreditCard("334859493847755774747"));
 
 // Repeat
-const message2 = "Bad waether... All Departues Delayed... ";
+const message2 = "Bad weather... All Departues Delayed... ";
 console.log(message2.repeat(5));
 
 const planesInLine = function (n) {
