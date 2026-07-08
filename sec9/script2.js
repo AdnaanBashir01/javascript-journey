@@ -117,18 +117,19 @@ const restaurant = {
 // console.log(email === normalizedEmail);
 
 // replacing
-const priceGB = "288,97£";
-const priceUS = priceGB.replace("£", "$").replace(",", ".");
-console.log(priceUS);
 
-const announcement =
-  "All passengers come to boarding door 23. Boarding door 23!";
 // const priceGB = "288,97£";
 // const priceUS = priceGB.replace("£", "$").replace(",", ".");
 // console.log(priceUS);
 
-console.log(announcement.replace("door", "gate"));
-console.log(announcement.replaceAll("door", "gate"));
+// const announcement =
+//   "All passengers come to boarding door 23. Boarding door 23!";
+// // const priceGB = "288,97£";
+// // const priceUS = priceGB.replace("£", "$").replace(",", ".");
+// // console.log(priceUS);
+
+// console.log(announcement.replace("door", "gate"));
+// console.log(announcement.replaceAll("door", "gate"));
 // const announcement =
 //   "All passengers come to boarding door 23. Boarding door 23!";
 
@@ -136,18 +137,19 @@ console.log(announcement.replaceAll("door", "gate"));
 // console.log(announcement.replaceAll("door", "gate"));
 
 // Alternative solution to replaceAll with regular expression
-console.log(announcement.replace(/door/g, "gate"));
+// console.log(announcement.replace(/door/g, "gate"));
 // console.log(announcement.replace(/door/g, "gate"));
 
 // Booleans
-const plane = "Airbus A320neo";
-console.log(plane.includes("A320"));
-console.log(plane.includes("Boeing"));
-console.log(plane.startsWith("Airb"));
 
-if (plane.startsWith("Airbus") && plane.endsWith("neo")) {
-  console.log("Part of the NEW ARirbus family");
-}
+// const plane = "Airbus A320neo";
+// console.log(plane.includes("A320"));
+// console.log(plane.includes("Boeing"));
+// console.log(plane.startsWith("Airb"));
+
+// if (plane.startsWith("Airbus") && plane.endsWith("neo")) {
+//   console.log("Part of the NEW ARirbus family");
+// }
 // const plane = "Airbus A320neo";
 // console.log(plane.includes("A320"));
 // console.log(plane.includes("Boeing"));
@@ -185,45 +187,66 @@ if (plane.startsWith("Airbus") && plane.endsWith("neo")) {
 // const newName = ["Mr.", firstName, lastName.toUpperCase()].join(" ");
 // console.log(newName);
 
-const capitalizeName = function (name) {
-  const names = name.split(" ");
-  const namesUpper = [];
+// const capitalizeName = function (name) {
+//   const names = name.split(" ");
+//   const namesUpper = [];
 
-  for (const n of names) {
-    // namesUpper.push(n[0].toUpperCase() + n.slice(1));
-    namesUpper.push(n.replace(n[0], n[0].toUpperCase()));
-  }
-  console.log(namesUpper.join(" "));
-};
+//   for (const n of names) {
+//     // namesUpper.push(n[0].toUpperCase() + n.slice(1));
+//     namesUpper.push(n.replace(n[0], n[0].toUpperCase()));
+//   }
+//   console.log(namesUpper.join(" "));
+// };
 
-capitalizeName("jessica ann smith davis");
-capitalizeName("jonas schmedtmann");
+// capitalizeName("jessica ann smith davis");
+// capitalizeName("jonas schmedtmann");
 
 // Padding
-const message = "Go to gate 23!";
-console.log(message.padStart(20, "+").padEnd(30, "+"));
-console.log("Adnan".padStart(20, "+").padEnd(30, "+"));
 
-const maskCreditCard = function (number) {
-  const str = number + "";
-  const last = str.slice(-4);
-  return last.padStart(str.length, "*");
-};
+// const message = "Go to gate 23!";
+// console.log(message.padStart(20, "+").padEnd(30, "+"));
+// console.log("Adnan".padStart(20, "+").padEnd(30, "+"));
 
-console.log(maskCreditCard(64637836));
-console.log(maskCreditCard(43378463864647384));
-console.log(maskCreditCard("334859493847755774747"));
+// const maskCreditCard = function (number) {
+//   const str = number + "";
+//   const last = str.slice(-4);
+//   return last.padStart(str.length, "*");
+// };
+
+// console.log(maskCreditCard(64637836));
+// console.log(maskCreditCard(43378463864647384));
+// console.log(maskCreditCard("334859493847755774747"));
 
 // Repeat
-const message2 = "Bad weather... All Departues Delayed... ";
-console.log(message2.repeat(5));
 
-const planesInLine = function (n) {
-  console.log(`There are ${n} planes in line ${"🛩".repeat(n)}`);
-};
-planesInLine(5);
-planesInLine(3);
-planesInLine(12);
+// const message2 = "Bad weather... All Departues Delayed... ";
+// console.log(message2.repeat(5));
+
+// const planesInLine = function (n) {
+//   console.log(`There are ${n} planes in line ${"🛩".repeat(n)}`);
+// };
+// planesInLine(5);
+// planesInLine(3);
+// planesInLine(12);
+
+//practice 4
+document.body.append(document.createElement("textarea"));
+document.body.append(document.createElement("button"));
+
+document.querySelector("button").addEventListener("click", function () {
+  const text = document.querySelector("textarea").value;
+  const rows = text.split("\n");
+
+  for (const [i, row] of rows.entries()) {
+    const [first, second] = row.toLowerCase().trim().split("_");
+
+    const output = `${first}${second.replace(
+      second[0],
+      second[0].toUpperCase(),
+    )}`;
+    console.log(`${output.padEnd(20)}${"✅".repeat(i + 1)}`);
+  }
+});
 
 // Practice exercise
 // const checkBaggage = function (items) {
