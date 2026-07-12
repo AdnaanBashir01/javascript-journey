@@ -24,27 +24,4 @@
 // const firstName = "Bob";
 // caclAge(1994);
 
-console.log(this); //global scope
-
-const calcAge = function (birthYear) {
-  console.log(2037 - birthYear);
-  console.log(this);
-};
-calcAge(1992);
-
-console.log(this);
-
-const calcAgeArrow = (birthYear) => {
-  console.log(2037 - birthYear);
-  console.log(this); //this keyword of parent scope.
-};
-calcAgeArrow(1992);
-
-const adnan = {
-  year: 2003,
-  caclAge: function () {
-    console.log(this);
-    console.log(2037 - this.year);
-  }, //this inside method, is object that is calling the method
-};
-adnan.caclAge();
+// console.log(this); //global scope
