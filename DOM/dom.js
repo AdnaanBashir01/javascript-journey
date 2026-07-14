@@ -1,13 +1,13 @@
 "use strict";
 
-// console.log(document.querySelector(".message").textContent);
+console.log(document.querySelector(".message").textContent);
 
-// document.querySelector(".message").textContent = "Correct Number!";
-// document.querySelector(".number").textContent = 13;
-// document.querySelector(".number").textContent = 17;
+document.querySelector(".message").textContent = "Correct Number!";
+document.querySelector(".number").textContent = 13;
+document.querySelector(".number").textContent = 17;
 
-// document.querySelector(".guess").value = 23;
-// console.log(document.querySelector(".guess").value);
+document.querySelector(".guess").value = 23;
+console.log(document.querySelector(".guess").value);
 
 let secretNumber = Math.trunc(Math.random() * 20) + 1; //Math.trunc(Math.random()*20) -> 0 to 19 , so add +1 , no decimals
 let score = 20;
