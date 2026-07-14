@@ -41,6 +41,7 @@ TEST DATA: 125, 555, and 44. */
 // To calculate the average, divide the sum you calculated before by the length of the array (because that's the number of elements).
 
 // Call the function with the totals array.
+
 const calcTip = function (bill) {
   return bill >= 50 && bill <= 300 ? bill * 0.15 : bill * 0.2;
 };
