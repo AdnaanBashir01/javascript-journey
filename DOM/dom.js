@@ -53,28 +53,28 @@ document.querySelector(".check").addEventListener("click", function () {
     }
   }
   //     // when there is no is too high
-  //     } else if (guess > secretNumber) {
-  //       if (score > 1) {
-  //         document.querySelector(".message").textContent = "too high";
-  //         score = score - 1; //score--
-  //         document.querySelector(".score").textContent = score;
-  //       } else {
-  //         document.querySelector(".message").textContent = "Game Over!";
-  //         document.querySelector(".score").textContent = 0;
-  //       }
+  else if (guess > secretNumber) {
+    if (score > 1) {
+      document.querySelector(".message").textContent = "too high";
+      score = score - 1; //score--
+      document.querySelector(".score").textContent = score;
+    } else {
+      document.querySelector(".message").textContent = "Game Over!";
+      document.querySelector(".score").textContent = 0;
+    }
 
-  //     // when there is no too low
-  //   } else if (guess < secretNumber) {
-  //     if (score > 1) {
-  //       document.querySelector(".message").textContent = "too low";
-  //       score = score - 1; //score--
-  //       document.querySelector(".score").textContent = score;
-  //     } else {
-  //       document.querySelector(".message").textContent = "Game Over!";
-  //       document.querySelector("body").style.backgroundColor = "red";
-  //       document.querySelector(".score").textContent = 0;
-  //     }
-  //   }
+    // when there is no too low
+  } else if (guess < secretNumber) {
+    if (score > 1) {
+      document.querySelector(".message").textContent = "too low";
+      score = score - 1; //score--
+      document.querySelector(".score").textContent = score;
+    } else {
+      document.querySelector(".message").textContent = "Game Over!";
+      document.querySelector("body").style.backgroundColor = "red";
+      document.querySelector(".score").textContent = 0;
+    }
+  }
 });
 document.querySelector(".again").addEventListener("click", function () {
   score = 20;
